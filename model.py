@@ -34,3 +34,7 @@ class Model:
 
     def face(self, idx: int) -> typing.Tuple[int]:
         return self._faces[idx]
+
+    def faces(self) -> typing.Iterable[typing.Tuple[int]]:
+        for f in self._faces:
+            yield f

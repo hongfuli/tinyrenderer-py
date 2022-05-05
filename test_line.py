@@ -49,3 +49,14 @@ def test_line_5(image):
     line.line_5(20, 13, 40, 80, image, red)
     line.line_5(80, 40, 13, 20, image, red)
     image.save("line_5")
+
+
+@pytest.fixture
+def image_1():
+    return tga.CoordinateImage(800, 800)
+
+
+def test_line_5_1(image_1):
+    white = (255, 255, 255)
+    line.line_5(400, 799, 400, 800, image_1, white)
+    image_1.save("line_5")

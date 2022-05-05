@@ -85,3 +85,6 @@ def line_5(x0, y0, x1, y1: int, image: CoordinateImage, color):
         if err > dx:
             y += y_direction
             err -= 2 * dx
+
+
+line = line_5

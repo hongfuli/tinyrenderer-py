@@ -912,4 +912,4 @@ class CoordinateImage:
 
     def _transform_coord(self, x: int, y: int) -> typing.Tuple[int]:
         if self._coord_type == CoordinateType.LB:
-            return self._h - y - 1, x
+            return self._h - y, x
