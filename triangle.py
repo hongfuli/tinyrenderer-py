@@ -26,3 +26,6 @@ def triange_1(p0: Vector2, p1: Vector2, p2: Vector2, image: CoordinateImage, col
             A, B = B, A
         for x in range(A.x, B.x + 1):
             image.set(x, p0.y + i, color)
+
+
+triangle = triange_1
