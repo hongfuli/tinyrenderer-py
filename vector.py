@@ -58,3 +58,6 @@ class Vector3:
 
     def tuple_data(self, n_type):
         return (n_type(self.x), n_type(self.y), n_type(self.z))
+
+    def __str__(self) -> str:
+        return f"({self.x}, {self.y}, {self.z})"

@@ -34,7 +34,7 @@ def test_model_triangle():
     image = CoordinateImage(width, height)
     white = (255, 255, 255)
 
-    light = Vector3(0, 0, -1, float)
+    light = Vector3(0, 0, 1, float)
 
     for face in m.faces():
         screen_coords: typing.List[Vector2] = []
