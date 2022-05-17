@@ -897,18 +897,38 @@ class CoordinateType(IntEnum):
 
 class CoordinateImage:
     def __init__(
-        self, w: int, h: int, coord_type: CoordinateType = CoordinateType.LB
+        self, w: int = 0, h: int = 0, coord_type: CoordinateType = CoordinateType.LB
     ) -> None:
         self._coord_type = coord_type
         self._w = w
         self._h = h
-        self._image: Image = Image([[(0, 0, 0) for w in range(w)] for h in range(h)])
+        if w > 0:
+            self._image: Image = Image(
+                [[(0, 0, 0) for w in range(w)] for h in range(h)]
+            )
+        else:
+            self._image: Image = Image()
 
     def set(self, x: int, y: int, color: typing.Union[int, tuple]):
         self._image.set_pixel(*self._transform_coord(x, y), color)
 
     def save(self, *args, **kwargs):
         return self._image.save(*args, **kwargs)
+
+    def load(self, file_name):
+        self._image.load(file_name)
+        self._w = self._image._header.image_width
+        self._h = self._image._header.image_height
+
+    def get_pixel(self, x: int, y: int):
+        return self._image.get_pixel(*self._transform_coord(x, self._h - y))
+        # return self._image.get_pixel(x, y)
+
+    def get_width(self):
+        return self._w
+
+    def get_height(self):
+        return self._h
 
     def _transform_coord(self, x: int, y: int) -> typing.Tuple[int]:
         if self._coord_type == CoordinateType.LB:

@@ -25,6 +25,9 @@ class Vector3:
         self.z = n_type(z)
         self.n_type = n_type
 
+    def __getitem__(self, idx: int):
+        return self.x if idx == 0 else self.y if idx == 1 else self.z
+
     def __add__(self, o: "Vector3"):
         return Vector3(self.x + o.x, self.y + o.y, self.z + o.z, self.n_type)
 
