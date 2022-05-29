@@ -14,9 +14,10 @@
   1. 3D 模型文件（本项目使用的 [obj 格式](https://en.wikipedia.org/wiki/Wavefront_.obj_file)）
   2. 根据 3D 模型生成正交投影的 2D 图像
   3. Z-Buffer
-  4. 透视投影
-  5. 阴影
-  6. 漫反射
+  4. 透视投影（Perspective Projection）
+  5. 着色（Shader）
+  6. 阴影（Shadow）
+  7. 环境光（Ambient）
 
 # 代码索引
 
