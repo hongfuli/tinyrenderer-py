@@ -99,6 +99,8 @@ def triange_with_texture(
 
     for x in range(min_x, max_x + 1):
         for y in range(min_y, max_y + 1):
+            if x > width or y > height:
+                continue
             bc_u = barycentric(
                 Vector2(x, y),
                 Vector2(p0.x, p0.y),
@@ -130,7 +132,11 @@ def triange_with_texture(
             idx = x + y * width
             if z_buffer[idx] < z_value:
                 z_buffer[idx] = z_value
-                image.set(x, y, [int(c * intensity) for c in color])
+                try:
+                    image.set(x, y, [int(c * intensity) for c in color])
+                except:
+                    print("x = ", x, "y = ", y)
+                    raise
 
 
 def in_triangle_by_barycentric(p, p0, p1, p2):
