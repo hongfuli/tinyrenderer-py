@@ -34,10 +34,17 @@
 
 # 效果预览
 
-![header_mesh](african_head_wire.tga)
+3D 模型：
+![header_obj](docs/african_head_obj.png)
 
-![header_mesh](african_head_triangle_with_zbuffer.tga)
+线框图：
+![header_mesh](docs/african_head_wire.png)
 
-![header_mesh](african_head_triangle_with_texture.tga)
+zbuffer：
+![header_zbuffer](docs/african_head_triangle_with_zbuffer.png)
 
-![header_mesh](african_head_triangle_with_perspective.tga)
+texture：
+![header_mesh](docs/african_head_triangle_with_texture.png)
+
+透视：
+![header_mesh](docs/african_head_triangle_with_perspective.png)
