@@ -2,6 +2,7 @@
 - [这个项目是什么？](#这个项目是什么)
 - [tinyrenderer 知识结构](#tinyrenderer-知识结构)
 - [代码索引](#代码索引)
+- [效果预览](#效果预览)
 
 # 这个项目是什么？
 
@@ -30,3 +31,13 @@
   4. 从 3D 模型(obj)渲染简单的三角形填充图, 并实现 z-buffer: [test_model_triangle_with_zbuffer](test_model.py)。
   5. 从 3D 模型(obj)渲染, 使用纹理(texture)填充: [test_model_triangle_with_texture](test_model.py)。
   6. 从 3D 模型(obj)渲染, 考虑透视视角投射: [test_model_triangle_with_perspective](test_model.py)。
+
+# 效果预览
+
+![header_mesh](african_head_wire.tga)
+
+![header_mesh](african_head_triangle_with_zbuffer.tga)
+
+![header_mesh](african_head_triangle_with_texture.tga)
+
+![header_mesh](african_head_triangle_with_perspective.tga)
